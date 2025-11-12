@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formula Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="formula-builder">
+    <h2>Formula Builder</h2>
+
+    <label>Formula Name</label>
+    <input type="text" id="formulaName" placeholder="Enter formula name" />
+
+    <label>Field</label>
+    <select id="fieldSelect">
+        <option value="" selected disabled>-- Select a Field --</option>
+        <option value="400KV_4CCP1_MEASUREMENTS_ACTIVE_POWER">400KV.4CCP1.MEASUREMENTS.ACTIVE POWER</option>
+        <option value="400KV_4CCP1_MEASUREMENTS_REACTIVE_POWER">400KV.4CCP1.MEASUREMENTS.REACTIVE POWER</option>
+        <option value="400KV_4CCP2_MEASUREMENTS_ACTIVE_POWER">400KV.4CCP2.MEASUREMENTS.ACTIVE POWER</option>
+        <option value="400KV_4CCP2_MEASUREMENTS_REACTIVE_POWER">400KV.4CCP2.MEASUREMENTS.REACTIVE POWER</option>
+    </select>
+
+
+    <label>Aggregate Functions</label>
+    <div class="button-group" id="aggregates">
+      <button>SUM</button>
+      <button>COUNT</button>
+      <button>MIN</button>
+      <button>MAX</button>
+      <button>AVG</button>
+    </div>
+
+    <label>Arithmetic Operators</label>
+    <div class="button-group" id="operators">
+      <button>+</button>
+      <button>-</button>
+      <button>*</button>
+      <button>/</button>
+      <button>(</button>
+      <button>)</button>
+    </div>
+
+    <label>Constant</label>
+    <div class="constant-row">
+    <input type="text" id="constant" placeholder="Enter a number (e.g. 200)" />
+    <button id="addConstant">✔</button>
+    </div>
+
+
+    <label>Formula</label>
+    <div class="formula-box" id="formulaBox"></div>
+
+    <div class="actions">
+      <button class="verify" id="verifyBtn">VERIFY</button>
+      <button class="cancel" id="cancelBtn">CANCEL</button>
+      <button class="save" id="saveBtn">SAVE</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
